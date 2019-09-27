@@ -13,8 +13,7 @@ spec:
       - name: workspace
         type: git
   steps:
-    - name: print-dir
+    - name: build
       image: ubuntu
       command: ["/bin/bash"]
-      args: ['-c', 'ls -la /workspace/hello-tekton']
-
+      args: ['/workspace/hello-tekton/scripts/build.sh']
