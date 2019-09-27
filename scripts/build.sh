@@ -11,6 +11,6 @@
 
 set -o pipefail
 
-echo "hello, world!"
+echo "hello, world2!"
 
 exit 0
