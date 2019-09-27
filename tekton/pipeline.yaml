@@ -7,9 +7,9 @@ spec:
     - name: source-repo
       type: git
   tasks:
-    - name: first-create-file          # 1. create file
+    - name: build
       taskRef:
-        name: create-file
+        name: build
       resources:
         inputs:
           - name: workspace
