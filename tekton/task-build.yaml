@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: build
+spec:
+  inputs:
+    resources:
+      - name: workspace
+        type: git
+        targetPath: hello-tekton
+  outputs:
+    resources:
+      - name: workspace
+        type: git
+  steps:
+    - name: print-dir
+      image: ubuntu
+      command: ["/bin/bash"]
+      args: ['-c', 'ls -la /workspace/hello-tekton']
